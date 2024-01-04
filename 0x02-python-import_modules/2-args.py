@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from sys import argv
 def print_arg(argv):
     n = len(argv) - 1
     if n == 0:
@@ -14,5 +15,4 @@ def print_arg(argv):
                 print("{:d}: {:s}".format(i, argv[i]))
                 i += 1
 if __name__ == "__main__":
-    import sys
     print_arg(sys.argv)
