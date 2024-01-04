@@ -9,10 +9,8 @@ def print_arg(argv):
             print("{} argument:".format(n))
         else:
             print("{} arguments:".format(n))
-        i = 1
-        while i <= n:
-            print("{}: {}".format(i, argv[i]))
-            i += 1
+        for n in range(n + 1):
+            print("{}: {}".format(n, argv[n]))
 
 if __name__ == "__main__":
     import sys
