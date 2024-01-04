@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import sys
 def print_arg(argv):
     n = len(argv) - 1
     if n == 0:
@@ -15,5 +16,5 @@ def print_arg(argv):
                 i += 1
 
 if __name__ == "__main__":
-    from sys import argv
+    #from sys import argv
     print_arg(sys.argv)
