@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from sys import argv
+import sys
 def print_arguments():
     num_arguments = len(argv) - 1
     print(f"Number of argument(s): {num_arguments}", end="")
