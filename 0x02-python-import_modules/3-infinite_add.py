@@ -10,6 +10,7 @@ def infinite_add(argv):
             result += int(argv[n])
         print("{}".format(result))
 
+
 if __name__ == "__main__":
     import sys
     infinite_add(sys.argv)
