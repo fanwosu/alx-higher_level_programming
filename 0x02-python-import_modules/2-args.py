@@ -10,6 +10,8 @@ def print_arg(argv):
             print("{} arguments:".format(n))
         for n in range(1, n + 1):
             print("{}: {}".format(n, argv[n]))
+
+
 if __name__ == "__main__":
     import sys
     print_arg(sys.argv)
