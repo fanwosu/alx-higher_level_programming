@@ -1,4 +1,4 @@
-#!/usr/bin/paython3
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     result = [[0 for _ in row] for row in matrix]
     for i in range(len(matrix)):
