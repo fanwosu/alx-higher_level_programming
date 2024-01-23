@@ -28,10 +28,12 @@ class Square:
         return (self.__size ** 2)
 
     def my_print(self):
-        if value == 0:
-            print()
-        else:
-            res = self.__size
-            while res > 0:
-                print("#")
-                res -= 1
+         """prints square of size self.__size using #"""
+
+         if self.__size > 0:
+             for column in range(self.__size):
+                 for row in range(self.__size):
+                     print("#", end="")
+                 print()
+         else:
+             print()
