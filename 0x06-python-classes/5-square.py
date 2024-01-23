@@ -5,6 +5,7 @@
 class Square:
     """Defines a sqaure with private instance attribute"""
 
+    res = 0
     def __init__(self, size=0):
         self.__size = size
 
@@ -29,4 +30,7 @@ class Square:
         if value == 0:
             print()
         else:
-            print("#{}".format(self.__size ** 2))
+            res = self.__size
+            while > 0:
+                print("#{}")
+                res -= 1
