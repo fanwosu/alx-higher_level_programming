@@ -10,12 +10,14 @@ and public instance methods to calculate area and print square."""
 
     def __init__(self, size=0, position=(0, 0)):
         """instantiates attribute size to 0 and position to (0, 0)"""
+
         self.size = size
         self.position = position
 
     @property
     def size(self):
         """get the private instance attribute size"""
+
         return(self.__size)
 
     @size.setter
@@ -30,11 +32,13 @@ and public instance methods to calculate area and print square."""
     @property
     def position(self):
         """gets the private instance attribute position"""
+
         return(self.__position)
 
     @position.setter
     def position(self, value):
         """sets the private instance attribute position"""
+
         check = 0
         while 1:
             if type(value) is not tuple or len(value) is not 2:
@@ -53,10 +57,12 @@ and public instance methods to calculate area and print square."""
 
     def area(self):
         """calculates and returns current square area"""
+
         return(self.__size * self.__size)
 
     def my_print(self):
         """prints square of size self.__size using #"""
+
         if self.__size > 0:
             for y in range(self.__position[1]):
                 print()
