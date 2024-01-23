@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
 class Square:
-    '''This is a class that defines a square'''
+    '''Defines a square'''
+    '''A square is a rectangle with four equal sides'''
     pass
