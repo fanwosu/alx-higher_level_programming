@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Creates empty class Square"""
+
 class Square:
-    """Enpty class"""
+    """defines enpty class"""
+
     pass
