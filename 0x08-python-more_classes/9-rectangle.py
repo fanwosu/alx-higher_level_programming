@@ -25,8 +25,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Args:
-            value (int): horizontal dimension of rec"""
+        """Args: value (int): horizontal dimension of rec"""
 
         if type(value) is not int:
             raise TypeError('width must be an integer')
@@ -42,8 +41,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Args:
-            value (int): vertical dimension of r"""
+        """Args: value (int): vertical dimension of r"""
 
         if type(value) is not int:
             raise TypeError('height must be an integer')
@@ -65,8 +63,7 @@ class Rectangle:
             return (self.__width * 2) + (self.__height * 2)
 
     def _draw_rectangle(self):
-        """Formats a string of '#' and '\n' chars to print the rectangle
-        represented by the current instance"""
+        """Formats a string of '#' and '\n' chars to print the rectangle"""
 
         str = ""
         for row in range(self.__height):
@@ -88,10 +85,8 @@ class Rectangle:
 
     @classmethod
     def __del__(cls):
-        """Decrements `number_of_instances`, then prints message upon
-        deletion of instance.
+        """Decrements `number_of_instances`, then prints message upon"""
 
-        """
         cls.number_of_instances -= 1
         print('Bye rectangle...')
 
