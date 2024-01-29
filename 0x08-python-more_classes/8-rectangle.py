@@ -76,16 +76,8 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Args:
-            value (int): vertical dimension of rectangle
+            value (int): vertical dimension of rectangle"""
 
-        Attributes:
-            __height (int): vertical dimension of rectangle
-
-        Raises:
-            TypeError: If `value` is not an int.
-            ValueError: If `value` is less than 0.
-
-        """
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value < 0:
@@ -93,30 +85,13 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns area of a rectangle of a given `width` and `height`.
+        """Returns area of a rectangle of a given `width` and `height`."""
 
-        Attributes:
-            __width (int): horizontal dimension of rectangle
-            __height (int): vertical dimension of rectangle
-
-        Returns:
-            Area of rectangle: __width * __height
-
-        """
         return self.__width * self.__height
 
     def perimeter(self):
-        """Returns the perimeter of a rectangle of given `width` and `height`
+        """Returns the perimeter of a rectangle of given `width` and `height"""
 
-        Attributes:
-            __width (int): horizontal dimension of rectangle
-            __height (int): vertical dimension of rectangle
-
-        Returns:
-            0 if either attribute is 0, or the perimeter: (__width * 2) +
-        (__height * 2).
-
-        """
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
@@ -124,43 +99,24 @@ class Rectangle:
 
     def _draw_rectangle(self):
         """Formats a string of '#' and '\n' chars to print the rectangle
-        represented by the current instance.
+        represented by the current instance."""
 
-        Attributes:
-            __width (int): horizontal dimension of rectangle
-            __height (int): vertical dimension of rectangle
-            str (str): string to constructed for return
-
-        Returns:
-            str (str): string suitable for printing rectangle (final newline
-                omitted)
-
-        """
         str = ""
         for row in range(self.__height):
             for col in range(self.__width):
                 str += "{}".format(self.print_symbol)
-            if self.__width != 0 and row < (self.__height - 1):
-                str += '\n'
+                if self.__width != 0 and row < (self.__height - 1):
+                    str += '\n'
         return str
 
     def __str__(self):
-        """Allows direct printing of instances.
+        """Allows direct printing of instances"""
 
-        Returns:
-            The output of _draw_rectangle, which creates a string
-        representation of the rectangle suitable for printing.
-
-        """
         return self._draw_rectangle()
 
     def __repr__(self):
-        """Allows use of eval().
+        """Allows use of eval()."""
 
-        Returns:
-            A string of the code needed to create the instance.
-
-        """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     @classmethod
@@ -174,20 +130,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Compares the area of two instances and returns the larger of the two.
-
-        Args:
-            rect_1 (Rectangle object): first instance to be compared
-            rect_2 (Rectangle object): second instance to be compared
-
-        Raises:
-            TypeError: if `rect_1` or `rect_2` is not an instance of cls.
-
-        Returns:
-            `rect_1` if `rect_1` has an area larger than or equal to `rect_2`,
-        or `rect_2` if it has the larger area
-
-        """
+        """Compares the area of two instances and returns the larger"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError('rect_1 must be an instance of Rectangle')
         if not isinstance(rect_2, Rectangle):
