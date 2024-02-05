@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-"""
-class module
-"""
+"""method for MyInt class"""
 
 
 class MyInt(int):
-    """class with int object"""
+    """rebel version of int"""
+    def __new__(cls, *args, **kwargs):
+        """new instance of class"""
+        return super(MyInt, cls).__new__(cls, *args, **kwargs)
 
-    def __ee__(self, other):
-        """equal equal method"""
-        return super().__ee__(other)
+    def __eq__(self, param):
+        """inverts the != functionality """
+        return int(self) != param
 
-    def __ne__(self, other):
-        """not equal method"""
-        return super().__ne__(other)
+    def __ne__(self, param):
+        """inverts the == functionality"""
+        return int(self) == param
